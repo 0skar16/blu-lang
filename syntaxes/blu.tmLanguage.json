@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Blu",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#reserved"
+		},
+		{
+			"include": "operators"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+		
+		
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.blu",
+				"match": "\\b(if|while|for|return|loop|else|let|global|break|continue|in|iter)\\b"
+			}]
+		},
+		"reserved": {
+			"name": "entity.name.method",
+			"match": "\\b(print|pairs)\\b"
+		},
+		"function": {
+			"name": "keyword.other.blu",
+			"match": "fn"
+		},
+		"strings": {
+			"name": "string.quoted.double.blu",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.blu",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.blu",
+				"begin": "//",
+				"end": "\\n"
+			},
+			{
+				"name": "comment.block.blu",
+				"begin": "/\\*",
+				"end": "\\*/"
+			}]
+		}
+	},
+	"scopeName": "source.blu"
+}
