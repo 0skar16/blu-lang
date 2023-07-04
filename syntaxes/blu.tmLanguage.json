@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#operators"
 		}
 		
 		
@@ -31,12 +34,12 @@
 			}]
 		},
 		"reserved": {
-			"name": "entity.name.method",
-			"match": "\\b(print|pairs)\\b"
+			"name": "keyword.other.blu",
+			"match": "\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|load|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b"
 		},
 		"function": {
 			"name": "keyword.other.blu",
-			"match": "fn"
+			"match": "\\b(fn|nil|nul|null|none|false|true)\\b"
 		},
 		"strings": {
 			"name": "string.quoted.double.blu",
@@ -48,6 +51,10 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"operators": {
+			"name": "keyword.operator.blu",
+			"match": "\\b(=|!|\\||>|<|\\^|-|\\+|&)\\b"
 		},
 		"comments": {
 			"patterns": [{
